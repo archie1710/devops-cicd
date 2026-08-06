@@ -1,13 +1,25 @@
-const express = require('express');
+import express from 'express';
+import prisma from '@prisma/client';
 const app = express();
+const prismaClient = new prisma.PrismaClient();
 
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
+app.get('/',async (req, res) => {
+     data : {
+        username: Math.random().toString(),
+        password: Math.random().toString()
+    };
+    res.json(data);
+}
+
 });
 
-app.post('/',(req,res)=>(
-    res.send('Response received')
+app.post('/',async(req,res)=>(
+
+    username = math.random().toString();
+    password = math.random().toString();
+    res.json('Hello, World!');
+    res.json('Response received')
 ))
 
-const PORT = process.env.PORT || 3000;
+app.listen(3000)
 
