@@ -1,24 +1,26 @@
 {
-  "name": "dc",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./index.ts",
-  "scripts": {
-  "dev": "node --watch index.js",
-  "build": "prisma generate",
-  "start": "node ./index.js"
-},
-  "keywords": [],
-  "type": "commonjs",
-  "dependencies": {
-    "@prisma/client": "^7.9.1",
-    "@types/express": "^5.0.6",
-    "express": "^5.2.1",
-    "node": "^26.7.0",
-    "prisma": "^7.9.1",
-    "typescript": "^7.0.2"
-  },
-  "devDependencies": {
-    "@types/node": "^26.1.2"
-  }
+   "name": "dc",
+   "version": "1.0.0",
+   "description": "",
+   "main": "dist/index.js",
+   "scripts": {
+      "dev": "tsx watch src/index.ts",
+      "build": "prisma generate && tsc",
+      "start": "node dist/index.js"
+   },
+   "keywords": [],
+   "type": "commonjs",
+   "dependencies": {
+      "@prisma/adapter-pg": "^7.9.1",
+      "@prisma/client": "^7.9.1",
+      "@types/express": "^5.0.6",
+      "express": "^5.2.1",
+      "node": "^26.7.0",
+      "pg": "^8.22.0",
+      "prisma": "^7.9.1",
+      "typescript": "^7.0.2"
+   },
+   "devDependencies": {
+      "@types/node": "^26.1.2"
+   }
 }

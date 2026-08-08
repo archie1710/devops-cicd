@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+.git
+npm-debug.log
+prisma.config.js
+prisma.config.js.map
+prisma.config.d.ts
+prisma.config.d.ts.map
